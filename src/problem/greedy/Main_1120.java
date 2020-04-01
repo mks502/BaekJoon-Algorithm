@@ -1,5 +1,5 @@
 package problem.greedy;
-import java.io.*;
+        import java.io.*;
 
 public class Main_1120 {
     public static void main(String[] args) throws IOException {
@@ -16,26 +16,18 @@ public class Main_1120 {
         String [] input = br.readLine().split(" ");
         return input;
     }
-    public static int solve (String A, String B){
+    public static int solve (String A, String B) {
         int count = 0;
         int min = Integer.MAX_VALUE;
-        if(A.length() == B.length()){
-            for(int i=0; i<A.length(); i++){
-                if(A.charAt(i) != B.charAt(i))
+
+        for (int i = 0; i < B.length() - A.length() + 1; i++) {
+            String temp = B.substring(i, i + A.length());
+            for (int j = 0; j < A.length(); j++) {
+                if (A.charAt(j) != temp.charAt(j))
                     count++;
             }
-            min = count;
-        }
-        else{
-            for(int i=0; i < B.length()-A.length()+1; i++){
-                String temp = B.substring(i,i+A.length());
-                for(int j=0; j<A.length(); j++){
-                    if(A.charAt(j) != temp.charAt(j) )
-                        count++;
-                }
-                min = Math.min(min,count);
-                count=0;
-            }
+            min = Math.min(min, count);
+            count = 0;
         }
         return min;
     }
