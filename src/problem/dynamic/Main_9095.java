@@ -8,6 +8,9 @@ public class Main_9095 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int num = Integer.parseInt(br.readLine());
         int answer[] = new int[num];
+        d[0] = 1;
+        d[1] = 1;
+        d[2] = 2;
         for(int i=0; i<num; i++) {
             answer[i] = Integer.parseInt(br.readLine());
             answer[i] = solve(answer[i]);
@@ -22,10 +25,6 @@ public class Main_9095 {
     static int [] d = new int[1000001];
 
     public static int solve(int n){
-        d[0] = 1;
-        d[1] = 1;
-        d[2] = 2;
-        d[3] = 4;
         if(n<=1)
             d[n] = 1;
         if(d[n]>0)
