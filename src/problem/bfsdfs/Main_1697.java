@@ -1,4 +1,4 @@
-package problem.bfs;
+package problem.bfsdfs;
 
 import java.io.*;
 import java.util.LinkedList;
