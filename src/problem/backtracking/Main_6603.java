@@ -22,9 +22,6 @@ public class Main_6603 {
             }
 
             for (int i = 0; i < lotto.length; i++) {
-                if (i + MAX > lotto.length)
-                    continue;
-
                 visited[i] = true;
                 backTracking(i, 1, lotto[i] + " ");
                 visited[i] = false;
@@ -37,7 +34,6 @@ public class Main_6603 {
 
 
     public static void backTracking(int index, int count, String str) {
-        if (index >= lotto.length || index + MAX - count > lotto.length) return;
         if (count == MAX) {
             sb.append(str + "\n");
             return;
