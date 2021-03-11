@@ -1,4 +1,4 @@
-package problem.brute;
+package problem.backtracking;
 
 import java.io.BufferedReader;
 import java.io.IOException;
