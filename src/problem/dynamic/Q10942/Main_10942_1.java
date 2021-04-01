@@ -15,7 +15,7 @@ public class Main_10942_1 {
         System.out.println(sb.toString());
     }
 
-    public static void input() throws IOException {
+    private static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(br.readLine());
         palindrome = br.readLine().replaceAll(" ","");
@@ -42,7 +42,7 @@ public class Main_10942_1 {
         br.close();
     }
 
-    public static boolean isPalindrome(String str) {
+    private static boolean isPalindrome(String str) {
         String reverseStr =  new StringBuilder(str).reverse().toString();
         if (str.equals(reverseStr))
             return true;

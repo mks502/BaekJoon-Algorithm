@@ -16,7 +16,7 @@ public class Main_10942_2 {
         System.out.println(sb.toString());
     }
 
-    public static void input() throws IOException {
+    private static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(br.readLine());
         String palindrome[] = br.readLine().split(" ");
@@ -36,7 +36,7 @@ public class Main_10942_2 {
         br.close();
     }
 
-    public static void solve() {
+    private static void solve() {
         for (int i = 1; i <= n; i++) {
             dp[i][i] = 1;
         }
