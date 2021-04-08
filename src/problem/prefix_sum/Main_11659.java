@@ -1,4 +1,4 @@
-package problem.sum;
+package problem.prefix_sum;
 
 import java.io.*;
 
